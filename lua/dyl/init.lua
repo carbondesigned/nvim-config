@@ -15,6 +15,8 @@ require("dyl.treesitter")
 require("dyl.lsp")
 require("dyl.cmp")
 require("dyl.formatting")
+require("dyl.bufferline")
+require("dyl.lualine")
 require("nvim-tree").setup()
 
 local autocmd = vim.api.nvim_create_autocmd
