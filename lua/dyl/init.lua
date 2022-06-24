@@ -18,6 +18,7 @@ require("dyl.formatting")
 require("dyl.bufferline")
 require("dyl.lualine")
 require("dyl.gitsigns")
+require("dyl.comments")
 require("nvim-tree").setup()
 
 local autocmd = vim.api.nvim_create_autocmd
