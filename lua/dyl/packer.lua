@@ -32,6 +32,7 @@ return require("packer").startup(function()
     use("mattn/efm-langserver")
     use("akinsho/bufferline.nvim")
     use("nvim-lualine/lualine.nvim")
+    use("lewis6991/gitsigns.nvim")
 
     -- Primeagen doesn"t create lodash
     use("ThePrimeagen/git-worktree.nvim")
