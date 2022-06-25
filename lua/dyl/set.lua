@@ -1,6 +1,6 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
-vim.g.mapleader = " " 
+vim.g.mapleader = " "
 
 vim.opt.hidden = true
 vim.opt.errorbells = false
