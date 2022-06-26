@@ -35,6 +35,8 @@ return require("packer").startup(function()
     use("lewis6991/gitsigns.nvim")
     use("numToStr/Comment.nvim")
     use("JoosepAlviste/nvim-ts-context-commentstring")
+    use("github/copilot.vim")
+    use("windwp/nvim-ts-autotag")
 
     -- Primeagen doesn"t create lodash
     use("ThePrimeagen/git-worktree.nvim")
