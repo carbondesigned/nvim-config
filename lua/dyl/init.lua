@@ -7,6 +7,7 @@ vim.cmd "colorscheme tokyonight"
 local neogit = require('neogit')
 neogit.setup {}
 
+
 require("dyl.set")
 require("dyl.packer")
 require("dyl.telescope")
@@ -14,7 +15,6 @@ require("dyl.keymap")
 require("dyl.treesitter")
 require("dyl.lsp")
 require("dyl.cmp")
-require("dyl.formatting")
 require("dyl.bufferline")
 require("dyl.lualine")
 require("dyl.gitsigns")
@@ -42,3 +42,4 @@ vim.g.gruvbox_invert_selection = '0'
 vim.opt.background = "dark"
 
 require('nvim-ts-autotag').setup()
+require 'colorizer'.setup()
