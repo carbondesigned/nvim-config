@@ -19,7 +19,10 @@ require("dyl.bufferline")
 require("dyl.lualine")
 require("dyl.gitsigns")
 require("dyl.comments")
+require("dyl.copilot")
 require("nvim-tree").setup()
+
+-- make a comment for me
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
