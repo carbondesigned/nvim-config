@@ -20,7 +20,7 @@ require("dyl.lualine")
 require("dyl.gitsigns")
 require("dyl.comments")
 require("dyl.copilot")
-require("nvim-tree").setup()
+require("dyl.nvimtree")
 
 -- make a comment for me
 
