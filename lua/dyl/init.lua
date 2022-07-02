@@ -21,6 +21,7 @@ require("dyl.gitsigns")
 require("dyl.comments")
 require("dyl.copilot")
 require("dyl.nvimtree")
+require("dyl.lsp.prettier")
 
 -- make a comment for me
 

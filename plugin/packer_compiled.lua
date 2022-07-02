@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/Users/dylan/.local/share/nvim/site/pack/packer/start/efm-langserver",
     url = "https://github.com/mattn/efm-langserver"
   },
+  ["eslint.nvim"] = {
+    loaded = true,
+    path = "/Users/dylan/.local/share/nvim/site/pack/packer/start/eslint.nvim",
+    url = "https://github.com/MunifTanjim/eslint.nvim"
+  },
   ["formatter.nvim"] = {
     loaded = true,
     path = "/Users/dylan/.local/share/nvim/site/pack/packer/start/formatter.nvim",
