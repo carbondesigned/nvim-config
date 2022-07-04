@@ -21,9 +21,6 @@ require("dyl.gitsigns")
 require("dyl.comments")
 require("dyl.copilot")
 require("dyl.nvimtree")
-require("dyl.lsp.prettier")
-
--- make a comment for me
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})

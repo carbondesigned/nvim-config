@@ -24,8 +24,6 @@ return require("packer").startup(function()
     use("lukas-reineke/lsp-format.nvim")
     use("mhartington/formatter.nvim")
     use('jose-elias-alvarez/null-ls.nvim')
-    use('MunifTanjim/eslint.nvim')
-    use('MunifTanjim/prettier.nvim')
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end

@@ -1,34 +1,31 @@
-local null_ls = require("null-ls")
-local eslint = require("eslint")
+local null_ls_status_ok, null_ls = pcall(require, "null-ls")
+if not null_ls_status_ok then
+    return
+end
 
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
 local formatting = null_ls.builtins.formatting
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
--- local diagnostics = null_ls.builtins.diagnostics
+local diagnostics = null_ls.builtins.diagnostics
 
-null_ls.setup({
+null_ls.setup {
+    debug = false,
     sources = {
-        formatting.prettier.with({ extra_args = { '--single-quote' } }),
-        formatting.stylua
-    }
-})
+        formatting.prettier,
+        formatting.stylua,
+        diagnostics.eslint,
+    },
+    on_attach = function(client)
+        if client.resolved_capabilities.document_formatting then
+            vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()")
+        end
+        vim.cmd [[
+      augroup document_highlight
+        autocmd! * <buffer>
+        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+      augroup END
+    ]]
+    end
+}
 
-eslint.setup({
-    bin = 'eslint', -- or `eslint_d`
-    code_actions = {
-        enable = true,
-        apply_on_save = {
-            enable = true,
-            types = { "problem" }, -- "directive", "problem", "suggestion", "layout"
-        },
-        disable_rule_comment = {
-            enable = true,
-            location = "separate_line", -- or `same_line`
-        },
-    },
-    diagnostics = {
-        enable = true,
-        report_unused_disable_directives = false,
-        run_on = "type", -- or `save`
-    },
-})
