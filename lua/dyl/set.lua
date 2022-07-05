@@ -1,6 +1,7 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.g.mapleader = " "
+vim.opt.mouse = "a"
 
 vim.opt.hidden = true
 vim.opt.errorbells = false
