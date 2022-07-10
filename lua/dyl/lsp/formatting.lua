@@ -13,7 +13,7 @@ null_ls.setup {
     sources = {
         formatting.prettier,
         formatting.stylua,
-        diagnostics.eslint,
+        require("null-ls").builtins.diagnostics.eslint_d,
     },
     on_attach = function(client)
         if client.resolved_capabilities.document_formatting then
@@ -28,4 +28,3 @@ null_ls.setup {
     ]]
     end
 }
-

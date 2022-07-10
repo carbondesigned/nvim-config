@@ -37,6 +37,7 @@ return require("packer").startup(function()
     use("github/copilot.vim")
     use("windwp/nvim-ts-autotag")
     use('norcalli/nvim-colorizer.lua')
+    use('sbdchd/neoformat')
 
     -- Primeagen doesn"t create lodash
     use("ThePrimeagen/git-worktree.nvim")

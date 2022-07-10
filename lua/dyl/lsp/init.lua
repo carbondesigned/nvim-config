@@ -4,5 +4,5 @@ if not status_ok then
 end
 
 require("dyl.lsp.lsp-installer")
-require('dyl.lsp.formatting')
+-- require('dyl.lsp.formatting')
 require("dyl.lsp.handlers").setup()

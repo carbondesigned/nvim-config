@@ -1,7 +1,7 @@
 local augroup = vim.api.nvim_create_augroup
 DylGroup = augroup('Dyl', {})
 
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
+-- vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
 vim.cmd "colorscheme tokyonight"
 
 local neogit = require('neogit')
@@ -21,6 +21,7 @@ require("dyl.gitsigns")
 require("dyl.comments")
 require("dyl.copilot")
 require("dyl.nvimtree")
+require('dyl.lsp.formatting')
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})

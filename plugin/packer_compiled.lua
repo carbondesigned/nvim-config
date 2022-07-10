@@ -109,11 +109,6 @@ _G.packer_plugins = {
     path = "/Users/dylan/.local/share/nvim/site/pack/packer/start/efm-langserver",
     url = "https://github.com/mattn/efm-langserver"
   },
-  ["eslint.nvim"] = {
-    loaded = true,
-    path = "/Users/dylan/.local/share/nvim/site/pack/packer/start/eslint.nvim",
-    url = "https://github.com/MunifTanjim/eslint.nvim"
-  },
   ["formatter.nvim"] = {
     loaded = true,
     path = "/Users/dylan/.local/share/nvim/site/pack/packer/start/formatter.nvim",
@@ -163,6 +158,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/dylan/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  neoformat = {
+    loaded = true,
+    path = "/Users/dylan/.local/share/nvim/site/pack/packer/start/neoformat",
+    url = "https://github.com/sbdchd/neoformat"
   },
   neogit = {
     loaded = true,
@@ -249,11 +249,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/dylan/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
-  },
-  ["prettier.nvim"] = {
-    loaded = true,
-    path = "/Users/dylan/.local/share/nvim/site/pack/packer/start/prettier.nvim",
-    url = "https://github.com/MunifTanjim/prettier.nvim"
   },
   ["symbols-outline.nvim"] = {
     loaded = true,
