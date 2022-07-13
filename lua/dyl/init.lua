@@ -7,6 +7,7 @@ vim.cmd "colorscheme tokyonight"
 local neogit = require('neogit')
 neogit.setup {}
 
+vim.cmd [[autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll]]
 
 require("dyl.set")
 require("dyl.packer")
