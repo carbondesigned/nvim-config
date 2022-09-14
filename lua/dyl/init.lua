@@ -2,7 +2,14 @@ local augroup = vim.api.nvim_create_augroup
 DylGroup = augroup('Dyl', {})
 
 -- vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
-vim.cmd "colorscheme tokyonight"
+-- vim.cmd "colorscheme tokyonight"
+vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
+
+require("catppuccin").setup({
+    transparent_background = true
+})
+
+vim.cmd [[colorscheme catppuccin]]
 
 local neogit = require('neogit')
 neogit.setup {}
@@ -38,11 +45,9 @@ autocmd('TextYankPost', {
     end,
 })
 
-vim.g.gruvbox_contrast_dark = 'hard'
-vim.g.tokyonight_transparent_sidebar = true
-vim.g.tokyonight_transparent = true
-vim.g.gruvbox_invert_selection = '0'
-vim.opt.background = "dark"
+-- vim.g.tokyonight_transparent_sidebar = true
+-- vim.g.tokyonight_transparent = true
+vim.opt.bg = "dark"
 
 require('nvim-ts-autotag').setup()
 require 'colorizer'.setup()
