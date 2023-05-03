@@ -2,12 +2,13 @@ return require("packer").startup(function()
     use("wbthomason/packer.nvim")
 
     -- Simple plugins can be specified as strings
-    use("TimUntersberger/neogit")
 
     -- TJ created lodash of neovim
     use("nvim-lua/plenary.nvim")
     use("nvim-lua/popup.nvim")
     use("nvim-telescope/telescope.nvim")
+
+    use({"TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim"})
 
     -- All the things
     use("neovim/nvim-lspconfig")
@@ -24,10 +25,6 @@ return require("packer").startup(function()
     use("lukas-reineke/lsp-format.nvim")
     use("mhartington/formatter.nvim")
     use('jose-elias-alvarez/null-ls.nvim')
-    use {
-        "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
-    }
     use("mattn/efm-langserver")
     use("akinsho/bufferline.nvim")
     use("nvim-lualine/lualine.nvim")
@@ -50,9 +47,10 @@ return require("packer").startup(function()
     use("folke/tokyonight.nvim")
     use { "catppuccin/nvim", as = "catppuccin" }
 
-    use("nvim-treesitter/nvim-treesitter", {
-        run = ":TSUpdate"
-    })
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    }
 
     use {
         'kyazdani42/nvim-tree.lua',
